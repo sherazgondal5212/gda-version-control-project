@@ -1,2 +1,2 @@
 deployment_environment=development
-deployment_platform=GitHub
+deployment_platforms=GitHub,GitLab
