@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Gondal Digital Agency's Git, GitHub, GitLab and Bitbucket version control engineering portfolio.">
+<title>Version Control Engineering | Gondal Digital Agency</title>
+<style>
+:root{--bg:#08111f;--panel:#101e32;--line:#263952;--text:#edf4ff;--muted:#a7b7ce;--gold:#e4bd75;--blue:#75b8ff;--green:#7fe0b0}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--blue);overflow-wrap:anywhere}
+.wrap{width:min(1120px,92%);margin:auto}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#08111ff2;backdrop-filter:blur(12px);z-index:5}
+nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 0;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:1px;color:var(--gold)}
+nav a{font-size:13px;text-decoration:none;margin-right:12px}
+.hero{padding:82px 0 60px;background:radial-gradient(ellipse at 85% 10%,#203d60 0,transparent 42%)}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.08;max-width:850px;margin:18px 0}
+h2{font-size:clamp(26px,4vw,38px);line-height:1.2;margin:0 0 16px}
+h3{margin:8px 0}
+p,.muted{color:var(--muted)}
+.hero p{font-size:18px;max-width:760px}
+.btn{display:inline-block;padding:11px 17px;border-radius:8px;background:var(--gold);color:#111a27;font-weight:800;text-decoration:none;margin:10px 8px 0 0}
+.btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)}
+.stats,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.stat,.card{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:21px}
+.stat strong{display:block;font-size:24px;color:var(--gold)}
+section{padding:54px 0;border-bottom:1px solid var(--line);scroll-margin-top:85px}
+.kicker{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:2px}
+.diagram{background:#0b1728;border:1px solid var(--line);border-radius:14px;padding:15px;overflow-x:auto}
+.diagram svg{display:block;width:100%;min-width:620px;height:auto}
+.pill{display:inline-block;border:1px solid #3a506b;border-radius:99px;padding:5px 10px;margin:4px;color:#d5e4f8;font-size:13px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#050b13;color:#bfe4d2;border:1px solid var(--line);border-radius:10px;padding:16px;overflow-x:auto;font-size:13px}
+code{color:#bfe4d2}
+.note{border-left:3px solid var(--gold);padding:10px 15px;background:#121e2e;color:var(--muted)}
+table{width:100%;border-collapse:collapse}
+td,th{text-align:left;border-bottom:1px solid var(--line);padding:12px;vertical-align:top}
+th{color:var(--gold)}
+footer{padding:35px 0;color:var(--muted)}
+.small{font-size:13px}
+.status{color:var(--green);font-weight:700}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap"><nav>
+<a class="brand" href="#top">GDA / ENGINEERING</a>
+<div>
+<a href="#architecture">Architecture</a>
+<a href="#workflow">Workflow</a>
+<a href="#testing">Testing</a>
+<a href="#automation">Automation</a>
+<a href="#links">Repository</a>
+</div>
+</nav></div>
+</header>
+
+<main id="top">
+<section class="hero" style="border:0;padding-top:75px">
+<div class="wrap">
+<div class="eyebrow">Cloud & DevOps Engineering Portfolio</div>
+<h1>Version Control & Multi-Platform Collaboration</h1>
+<p>A practical implementation of Git version control, branching strategies, merge conflict resolution and remote repository workflows across GitHub, GitLab and Bitbucket.</p>
+<p><strong>Gondal Digital Agency</strong> · Engineering Project · 2026</p>
+<a class="btn" href="https://github.com/sherazgondal5212/gda-version-control-project">View GitHub Repository ↗</a>
+<a class="btn alt" href="#architecture">Explore Architecture ↓</a>
+<div style="margin-top:24px">
+<span class="pill">Git</span><span class="pill">GitHub</span>
+<span class="pill">GitLab</span><span class="pill">Bitbucket</span>
+<span class="pill">Bash</span><span class="pill">HTML/CSS</span>
+</div>
+</div>
+</section>
+
+<div class="wrap">
+<section id="vision">
+<div class="kicker">01 / PROJECT VISION</div>
+<h2>Reliable, traceable code collaboration</h2>
+<p>The objective is to maintain a reliable history of source-code changes, isolate work in branches, merge reviewed changes safely and distribute repository history to remote hosting platforms.</p>
+<div class="grid">
+<div class="card"><h3>Version history</h3><p>Track commits, inspect changes and understand how the project evolves.</p></div>
+<div class="card"><h3>Branch strategy</h3><p>Separate feature development from the stable main branch.</p></div>
+<div class="card"><h3>Conflict resolution</h3><p>Reproduce competing edits, resolve them deliberately and verify the result.</p></div>
+<div class="card"><h3>Remote collaboration</h3><p>Publish code and history to hosting platforms for review and collaboration.</p></div>
+</div>
+</section>
+
+<section id="architecture">
+<div class="kicker">02 / ARCHITECTURE DIAGRAM</div>
+<h2>Repository architecture</h2>
+<p>One local Git repository is connected to multiple independent remote repositories. Each remote must be configured and authenticated separately.</p>
+<div class="diagram">
+<svg viewBox="0 0 900 420" role="img" aria-label="Developer to local Git repository, then three remote platforms">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e4bd75"/></marker></defs>
+<rect x="280" y="15" width="340" height="70" rx="12" fill="#172b43" stroke="#75b8ff"/>
+<text x="450" y="43" fill="#edf4ff" text-anchor="middle" font-size="18" font-weight="bold">Developer / CloudShell</text>
+<text x="450" y="65" fill="#a7b7ce" text-anchor="middle" font-size="13">Edit · Test · Stage</text>
+<path d="M450 85 V120" stroke="#e4bd75" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="280" y="130" width="340" height="82" rx="12" fill="#172b43" stroke="#e4bd75"/>
+<text x="450" y="160" fill="#edf4ff" text-anchor="middle" font-size="18" font-weight="bold">Local Git Repository</text>
+<text x="450" y="184" fill="#a7b7ce" text-anchor="middle" font-size="13">Branch · Commit · Merge · History</text>
+<path d="M450 212 V245 H155 V278 M450 245 V278 M450 245 H745 V278" stroke="#e4bd75" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<rect x="45" y="285" width="220" height="85" rx="12" fill="#172b43" stroke="#75b8ff"/>
+<text x="155" y="320" fill="#edf4ff" text-anchor="middle" font-size="19" font-weight="bold">GitHub</text>
+<text x="155" y="345" fill="#a7b7ce" text-anchor="middle" font-size="13">Push / Pull / PR</text>
+<rect x="340" y="285" width="220" height="85" rx="12" fill="#172b43" stroke="#e4bd75"/>
+<text x="450" y="320" fill="#edf4ff" text-anchor="middle" font-size="19" font-weight="bold">GitLab</text>
+<text x="450" y="345" fill="#a7b7ce" text-anchor="middle" font-size="13">Push / Pull / MR</text>
+<rect x="635" y="285" width="220" height="85" rx="12" fill="#172b43" stroke="#7fe0b0"/>
+<text x="745" y="320" fill="#edf4ff" text-anchor="middle" font-size="19" font-weight="bold">Bitbucket</text>
+<text x="745" y="345" fill="#a7b7ce" text-anchor="middle" font-size="13">Push / Pull / PR</text>
+</svg>
+</div>
+<p class="small">PR = pull request · MR = merge request. This diagram represents the target workflow; GitHub is connected first. GitLab and Bitbucket are future implementation steps until their remotes are configured and verified.</p>
+</section>
+
+<section id="workflow">
+<div class="kicker">03 / TECHNICAL WORKFLOW</div>
+<h2>From local changes to remote delivery</h2>
+<div class="card">
+<p><strong>1. Initialize</strong> → <strong>2. Stage</strong> → <strong>3. Commit</strong> → <strong>4. Branch</strong> → <strong>5. Merge</strong> → <strong>6. Resolve conflicts</strong> → <strong>7. Push</strong> → <strong>8. Verify</strong></p>
+<pre>git status
+git add README.md
+git commit -m "Describe the change"
+git switch -c feature/example
+git switch main
+git merge feature/example
+git log --oneline --graph --all
+git push -u origin main</pre>
+</div>
+<p>Commands are examples for the workflow. Run them in the correct repository state; a branch switch or merge may require a clean working tree.</p>
+</section>
+
+<section id="evidence">
+<div class="kicker">04 / TERMINAL EVIDENCE</div>
+<h2>Implementation record</h2>
+<p>Verified outputs recorded during this project session:</p>
+<div class="grid">
+<div class="card"><h3>Environment setup</h3><p class="status">Verified in terminal</p><pre>git version 2.50.1
+Git identity configured
+README.md created</pre></div>
+<div class="card"><h3>Initial commit</h3><p class="status">Verified in terminal</p><pre>487c782
+Initial commit:
+GDA version control project</pre></div>
+<div class="card"><h3>Branch merge</h3><p class="status">Verified in terminal</p><pre>3223bf1
+Add version control workflow
+bbf5b44
+Merge version control workflow</pre></div>
+<div class="card"><h3>Conflict resolution</h3><p>Conflict reproduced between GitHub and GitLab configuration edits. A resolution commit was created locally.</p><pre>deployment_platforms=GitHub,GitLab</pre></div>
+</div>
+<p class="note">These are text-based evidence summaries, not screenshots. Actual terminal screenshots can be added to the repository when captured. GitHub push of the main branch was confirmed by terminal output; feature branch publication should be verified separately.</p>
+</section>
+
+<section id="testing">
+<div class="kicker">05 / TESTING & EVIDENCE</div>
+<h2>Validation checklist</h2>
+<table>
+<thead><tr><th>Test</th><th>Validation method</th><th>Evidence status</th></tr></thead>
+<tbody>
+<tr><td>Git installation and identity</td><td><code>git --version</code>, <code>git config --global --list</code></td><td>Verified</td></tr>
+<tr><td>Repository cleanliness</td><td><code>git status</code></td><td>Clean at Phase 3</td></tr>
+<tr><td>Branch history and merge</td><td><code>git log --oneline --graph --all</code></td><td>Verified locally</td></tr>
+<tr><td>Merge conflict</td><td>Competing edits to <code>deployment.txt</code></td><td>Conflict reproduced</td></tr>
+<tr><td>Conflict resolution</td><td>Inspect file and verify no conflict markers</td><td>Resolution command provided; verify final output</td></tr>
+<tr><td>GitHub main push</td><td><code>git push -u origin main</code></td><td>Push confirmed by terminal output</td></tr>
+<tr><td>GitLab and Bitbucket</td><td>Configure remotes and push</td><td>Pending</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="automation">
+<div class="kicker">06 / AUTOMATION SCRIPTS</div>
+<h2>Repository health check</h2>
+<p>This safe Bash example reports the current branch, working-tree status and recent commits. It does not change or delete project data.</p>
+<pre>#!/usr/bin/env bash
+set -e
+echo "=== Repository ==="
+git rev-parse --show-toplevel
+echo "=== Current branch ==="
+git branch --show-current
+echo "=== Working tree ==="
+git status --short
+echo "=== Recent commits ==="
+git log -5 --oneline
+echo "=== Tracked files ==="
+git ls-files</pre>
+<p>Save this as <code>scripts/repo-health-check.sh</code> to include it in the next repository update. Automation results must be captured after the script is actually run.</p>
+</section>
+
+<section id="outcomes">
+<div class="kicker">07 / OUTCOMES & METRICS</div>
+<h2>What this project demonstrates</h2>
+<div class="stats">
+<div class="stat"><strong>3</strong>Local feature branches created</div>
+<div class="stat"><strong>1</strong>Main branch pushed to GitHub</div>
+<div class="stat"><strong>1</strong>Merge conflict reproduced</div>
+<div class="stat"><strong>0</strong>New AWS infrastructure resources required</div>
+</div>
+<p class="note">Counts reflect the work recorded in the current project session. These figures do not claim that GitLab or Bitbucket deployments have already been completed.</p>
+</section>
+
+<section id="links">
+<div class="kicker">08 / GITHUB & LIVE LINKS</div>
+<h2>Project resources</h2>
+<div class="grid">
+<div class="card"><h3>GitHub Repository</h3><p>Primary repository and project history.</p><a href="https://github.com/sherazgondal5212/gda-version-control-project">Open repository ↗</a></div>
+<div class="card"><h3>GitLab</h3><p>Secondary remote platform; configure after creating the repository.</p><span class="muted">Not yet connected</span></div>
+<div class="card"><h3>Bitbucket</h3><p>Secondary remote platform; configure after creating the repository.</p><span class="muted">Not yet connected</span></div>
+<div class="card"><h3>Live Portfolio</h3><p>Enable GitHub Pages in repository settings to publish this HTML page.</p><a href="https://github.com/sherazgondal5212/gda-version-control-project/settings/pages">GitHub Pages settings ↗</a></div>
+</div>
+</section>
+
+<section id="branding">
+<div class="kicker">09 / ORGANIZATION & BRANDING</div>
+<h2>Gondal Digital Agency</h2>
+<p>Cloud engineering · Version control · DevOps foundations · Automation</p>
+<p>This project documents practical engineering work in source control, collaboration and repository management. Only completed and verified work is represented as implemented; future integrations are labelled as pending.</p>
+<a class="btn" href="https://github.com/sherazgondal5212">Explore GitHub Profile ↗</a>
+</section>
+</div>
+</main>
+<footer><div class="wrap">
+<strong style="color:var(--gold)">GDA · Gondal Digital Agency</strong>
+<p class="small">Version Control Engineering Portfolio · Built with HTML and CSS · Responsive layout</p>
+</div></footer>
+</body>
+</html>
